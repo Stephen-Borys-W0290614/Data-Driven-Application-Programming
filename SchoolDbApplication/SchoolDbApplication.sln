@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolDbModel", "SchoolDbModel\SchoolDbModel.csproj", "{762FA137-DF6F-43DC-8E18-9E88DA84B3C5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SchoolDbService", "SchoolDbService\SchoolDbService.csproj", "{1910D666-E561-4867-8433-D302D5DFC75B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{762FA137-DF6F-43DC-8E18-9E88DA84B3C5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{762FA137-DF6F-43DC-8E18-9E88DA84B3C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{762FA137-DF6F-43DC-8E18-9E88DA84B3C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{762FA137-DF6F-43DC-8E18-9E88DA84B3C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1910D666-E561-4867-8433-D302D5DFC75B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1910D666-E561-4867-8433-D302D5DFC75B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1910D666-E561-4867-8433-D302D5DFC75B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1910D666-E561-4867-8433-D302D5DFC75B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31069FBD-6EAA-4979-8735-D50ECFC60C90}
+	EndGlobalSection
+EndGlobal
