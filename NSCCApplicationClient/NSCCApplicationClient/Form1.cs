@@ -26,11 +26,15 @@ namespace NSCCApplicationClient
 
         Boolean citizenshipOther;
 
+        Boolean citizenshipAnswerd;
+
         Boolean provStateAnswerd;
 
         Boolean firstLanguageOther = true;
 
         Boolean firstLanguageOtherAnswerd;
+
+        Boolean makeApplication;
 
 
         public middleNameTextBox()
@@ -175,7 +179,9 @@ namespace NSCCApplicationClient
             catch
             {
 
-                MessageBox.Show("An Error Has Occured");
+                MessageBox.Show("An Error Has Occured With The API");
+
+                this.Close();
 
             }
 
@@ -229,54 +235,66 @@ namespace NSCCApplicationClient
         private void countryComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
-            Country selectedCountry
-    = (Country)countryComboBox.SelectedItem;
-
-            var provStateList =
-                service.ProvinceStates.Where(p => p.CountryCode == selectedCountry.Code).ToList();
-
-            int counter = provStateList.Count;
-
-
-            if (counter > 0)
+            try
             {
-                provStateComboBox.Enabled = true;
 
-                provStateOtherTextBox.Enabled = false;
 
-                provStateComboBox.DataSource = provStateList;
+                Country selectedCountry
+                    = (Country)countryComboBox.SelectedItem;
 
-                provStateComboBox.DisplayMember = "Name";
+                var provStateList =
+                    service.ProvinceStates.Where(p => p.CountryCode == selectedCountry.Code).ToList();
 
-                provStateOther = false;
+                int counter = provStateList.Count;
 
-                provState = true;
 
-                provStateAnswerd = true;
+                if (counter > 0)
+                {
+                    provStateComboBox.Enabled = true;
+
+                    provStateOtherTextBox.Enabled = false;
+
+                    provStateComboBox.DataSource = provStateList;
+
+                    provStateComboBox.DisplayMember = "Name";
+
+                    provStateOther = false;
+
+                    provState = true;
+
+                    provStateAnswerd = true;
+
+                }
+                else if (selectedCountry.Name == "<Select A Country>")
+                {
+
+                    provStateComboBox.Enabled = false;
+
+                    provStateOtherTextBox.Enabled = false;
+
+                    provState = false;
+
+                }
+                else
+                {
+
+                    provStateOther = true;
+
+                    provStateAnswerd = true;
+
+                    provStateComboBox.Enabled = false;
+
+                    provStateOtherTextBox.Enabled = true;
+
+                    provState = false;
+
+                }
 
             }
-            else if (selectedCountry.Name == "<Select A Country>")
+            catch
             {
 
-                provStateComboBox.Enabled = false;
-
-                provStateOtherTextBox.Enabled = false;
-
-                provState = false;
-
-            }
-            else
-            {
-
-                provStateOther = true;
-
-                provStateAnswerd = true;
-
-                provStateComboBox.Enabled = false;
-
-                provStateOtherTextBox.Enabled = true;
-
-                provState = false;
+                MessageBox.Show("An Error Has Occured");
 
             }
 
@@ -290,36 +308,47 @@ namespace NSCCApplicationClient
         private void citizenshipComboBox_SelectedIndexChanged_1(object sender, EventArgs e)
         {
 
-
-            Citizenship selectedCitizenship
-             = (Citizenship)citizenshipComboBox.SelectedItem;
-
-
-            if (selectedCitizenship.Description == "Other")
+            try
             {
 
-                citizenshipOtherComboBox.Enabled = true;
 
-                citizenshipOther = true;
+                Citizenship selectedCitizenship
+                 = (Citizenship)citizenshipComboBox.SelectedItem;
+
+
+                if (selectedCitizenship.Description == "Other")
+                {
+
+                    citizenshipOtherComboBox.Enabled = true;
+
+                    citizenshipOther = true;
+
+                }
+                else if (selectedCitizenship.Description == "Refugee with protected person status")
+                {
+
+                    citizenshipOtherComboBox.Enabled = true;
+
+                    citizenshipOther = true;
+
+                }
+                else
+                {
+
+                    citizenshipOtherComboBox.Enabled = false;
+
+                    citizenshipOther = false;
+
+                }
 
             }
-            else if (selectedCitizenship.Description == "Refugee with protected person status")
+            catch
             {
 
-                citizenshipOtherComboBox.Enabled = true;
+                MessageBox.Show("An Error Has Occured");
 
-                citizenshipOther = true;
-
-            }
-            else
-            {
-
-                citizenshipOtherComboBox.Enabled = false;
-
-                citizenshipOther = false;
 
             }
-
 
         }
 
@@ -367,456 +396,466 @@ namespace NSCCApplicationClient
                = (NSCCApplicationFormDataLayer.Models.Program)programsComboBox2.SelectedItem;
 
 
-
-            if (firstNameTextBox.Text.Length == 0)
+            if (makeApplication == false)
             {
+                int counter = 0;
 
-                MessageBox.Show("Please Fill In A First Name");
-
-            }
-
-            //if (middelNameTextBox.Text.Length == 0)
-            //{
-
-            //    MessageBox.Show("Please Fill In A Middle Name");
-
-            //}
-
-            if (lastNameTextBox.Text.Length == 0)
-            {
-
-                MessageBox.Show("Please Fill In A Last Name");
-
-            }
-
-
-            if (dateOfBirthTextBox.Text.Length == 0)
-            {
-
-                MessageBox.Show("Please Fill In A Date Of Birth");
-
-            }
-            else if (IsCorrectDate(dateOfBirthTextBox.Text) == false)
-            {
-
-                MessageBox.Show("Please Fill In A Valid Date Of Birth");
-
-            }
-
-
-
-            if (selectedGender.Description == "<Select A Gender>")
-            {
-
-                MessageBox.Show("Please Select A Gender");
-
-            }
-
-
-            if (selectedCountry.Name == "<Select A Country>")
-            {
-
-                MessageBox.Show("Please Select A Country");
-
-            }
-
-
-            if (streetTextBox.Text.Length == 0)
-            {
-
-                MessageBox.Show("Please Fill In A Street Address");
-
-            }
-
-
-            if (cityTextBox.Text.Length == 0)
-            {
-
-                MessageBox.Show("Please Fill In A City");
-
-            }
-
-
-            if (selectedProvState.Name == "<Select A Province/State>" && provState == true)
-            {
-
-                MessageBox.Show("Please Select A Province/State");
-
-            }
-
-
-            if (provStateOtherTextBox.Text.Length == 0 && provStateOther == true)
-            {
-
-                MessageBox.Show("Please Fill In A Province State Other");
-
-            }
-
-
-            if (emailTextBox.Text.Length == 0)
-            {
-
-                MessageBox.Show("Please Fill In An Email");
-
-            }
-            else if(IsValidEmail(emailTextBox.Text) == false)
-            {
-
-                MessageBox.Show("Please Fill In A Valid Email");
-
-            }
-
-
-            if (selectedCitizenship.Description == "<Select A Citizenship>")
-            {
-
-                MessageBox.Show("Please Select A Citizenship");
-
-            }
-
-
-            if (selectedCitizenshipOther.Name == "<Select A Citizenship Other>" && citizenshipOther == true)
-            {
-
-                MessageBox.Show("Please Select A Citizenship Other");
-
-            }
-
-
-            if (selectedProgram.Name == "<Select A Program>")
-            {
-
-                MessageBox.Show("Please Select A Program");
-
-            }
-
-
-            if (selectedCampus.Name == "<Select A Campus>")
-            {
-
-                MessageBox.Show("Please Select A Campus");
-
-            }
-
-
-            if (selectedProgram2.Name == "<Select A Program>")
-            {
-
-                MessageBox.Show("Please Select A Second Program");
-
-            }
-
-
-            if (selectedCampus2.Name == "<Select A Campus>")
-            {
-
-                MessageBox.Show("Please Select A Second Campus");
-
-            }
-
-            if (phoneTextBox.Text.Length == 0)
-            {
-
-                MessageBox.Show("Please Fill In An Phone Number");
-
-            }
-            else if(IsValidPhone(phoneTextBox.Text) == false)
-            {
-
-                MessageBox.Show("Please Fill In A Valid Phone Number");
-
-            }
-
-            if (firstLanguageOtherTextBox.Text.Length == 0 && firstLanguageOther == true)
-            {
-
-                MessageBox.Show("Please Fill In A First Language Other");
-
-                firstLanguageOtherAnswerd = false;
-
-
-            }
-            else
-            {
-
-                firstLanguageOtherAnswerd = true;
-
-            }
-
-            if (firstNameTextBox.Text.Length > 0 &&
-                lastNameTextBox.Text.Length > 0 &&
-                dateOfBirthTextBox.Text.Length > 0 &&
-                selectedGender.Description != "<Select A Gender>" &&
-                selectedCountry.Name != "<Select A Country>" &&
-                streetTextBox.Text.Length > 0 &&
-                cityTextBox.Text.Length > 0 &&
-                provStateAnswerd == true &&
-                emailTextBox.Text.Length > 0 &&
-                selectedCitizenship.Description != "<Select A Citizenship>" &&
-                citizenshipOther == false &&
-                selectedProgram.Name != "<Select A Program>" &&
-                selectedCampus.Name != "<Select A Campus>" &&
-                selectedProgram2.Name != "<Select A Program>" &&
-                selectedCampus2.Name != "<Select A Campus>" &&
-                phoneTextBox.Text.Length > 0 &&
-                firstLanguageOtherAnswerd == true
-                )
-            {
-
-                try
+                if (firstNameTextBox.Text.Length == 0)
                 {
 
+                    MessageBox.Show("Please Fill In A First Name");
 
-                    //Make and add applicant to database
-                    Applicant newApplicant = new Applicant();
+                }
+                else if (lastNameTextBox.Text.Length == 0)
+                {
 
-                    newApplicant.FirstName = firstNameTextBox.Text;
+                    MessageBox.Show("Please Fill In A Last Name");
 
-                    if (String.IsNullOrEmpty(middelNameTextBox.Text) == false)
+                }
+                else if (dateOfBirthTextBox.Text.Length == 0)
+                {
+
+                    MessageBox.Show("Please Fill In A Date Of Birth");
+
+                }
+                else if (IsCorrectDate(dateOfBirthTextBox.Text) == false)
+                {
+
+                    MessageBox.Show("Please Fill In A Valid Date Of Birth");
+
+                }
+                else if (selectedGender.Description == "<Select A Gender>")
+                {
+
+                    MessageBox.Show("Please Select A Gender");
+
+                }
+                else if (selectedCountry.Name == "<Select A Country>")
+                {
+
+                    MessageBox.Show("Please Select A Country");
+
+                }
+                else if (streetTextBox.Text.Length == 0)
+                {
+
+                    MessageBox.Show("Please Fill In A Street Address");
+
+                }
+                else if (cityTextBox.Text.Length == 0)
+                {
+
+                    MessageBox.Show("Please Fill In A City");
+
+                }
+                else if (selectedProvState.Name == "<Select A Province/State>" && provState == true)
+                {
+
+                    MessageBox.Show("Please Select A Province/State");
+
+                }
+                else if (provStateOtherTextBox.Text.Length == 0 && provStateOther == true)
+                {
+
+                    MessageBox.Show("Please Fill In A Province State Other");
+
+                }
+                else if (emailTextBox.Text.Length == 0)
+                {
+
+                    MessageBox.Show("Please Fill In An Email");
+
+                }
+                else if (IsValidEmail(emailTextBox.Text) == false)
+                {
+
+                    MessageBox.Show("Please Fill In A Valid Email");
+
+                }
+
+                if (selectedCitizenship.Description == "<Select A Citizenship>")
+                {
+
+                    MessageBox.Show("Please Select A Citizenship");
+
+                }
+                else
+                {
+
+                    citizenshipAnswerd = true;
+
+                    counter += 1;
+
+                }
+
+                if (selectedCitizenshipOther.Name == "<Select A Citizenship Other>" && citizenshipOther == true)
+                {
+
+                    MessageBox.Show("Please Select A Citizenship Other");
+
+                }
+                else
+                {
+
+                    citizenshipAnswerd = true;
+
+                    counter += 1;
+
+
+                }
+
+
+                if (selectedProgram.Name == "<Select A Program>")
+                {
+
+                    MessageBox.Show("Please Select A Program");
+
+                }
+                else if (selectedCampus.Name == "<Select A Campus>")
+                {
+
+                    MessageBox.Show("Please Select A Campus");
+
+                }
+                else if (selectedProgram2.Name == "<Select A Program>")
+                {
+
+                    MessageBox.Show("Please Select A Second Program");
+
+                }
+                else if (selectedCampus2.Name == "<Select A Campus>")
+                {
+
+                    MessageBox.Show("Please Select A Second Campus");
+
+                }
+                else if (phoneTextBox.Text.Length == 0)
+                {
+
+                    MessageBox.Show("Please Fill In An Phone Number");
+
+                }
+                else if (IsValidPhone(phoneTextBox.Text) == false)
+                {
+
+                    MessageBox.Show("Please Fill In A Valid Phone Number");
+
+                }
+
+
+
+
+                if (firstLanguageOtherTextBox.Text.Length == 0 && firstLanguageOther == true)
+                {
+
+                    MessageBox.Show("Please Fill In A First Language Other");
+
+                    firstLanguageOtherAnswerd = false;
+
+
+                }
+
+                else
+                {
+
+                    firstLanguageOtherAnswerd = true;
+
+                    counter += 1;
+
+
+                }
+
+
+                if (counter == 3)
+                {
+
+                    makeApplication = true;
+
+                }
+
+
+            }
+
+            if (makeApplication == true)
+            {
+
+
+                if (firstNameTextBox.Text.Length > 0 &&
+                    lastNameTextBox.Text.Length > 0 &&
+                    dateOfBirthTextBox.Text.Length > 0 &&
+                    selectedGender.Description != "<Select A Gender>" &&
+                    selectedCountry.Name != "<Select A Country>" &&
+                    streetTextBox.Text.Length > 0 &&
+                    cityTextBox.Text.Length > 0 &&
+                    provStateAnswerd == true &&
+                    emailTextBox.Text.Length > 0 &&
+                    selectedCitizenship.Description != "<Select A Citizenship>" &&
+                    citizenshipAnswerd == true &&
+                    selectedProgram.Name != "<Select A Program>" &&
+                    selectedCampus.Name != "<Select A Campus>" &&
+                    selectedProgram2.Name != "<Select A Program>" &&
+                    selectedCampus2.Name != "<Select A Campus>" &&
+                    phoneTextBox.Text.Length > 0 &&
+                    firstLanguageOtherAnswerd == true
+                    )
+                {
+
+                    try
                     {
 
-                        newApplicant.MiddleName = middelNameTextBox.Text;
+
+                        //Make and add applicant to database
+                        Applicant newApplicant = new Applicant();
+
+                        newApplicant.FirstName = firstNameTextBox.Text;
+
+                        if (String.IsNullOrEmpty(middelNameTextBox.Text) == false)
+                        {
+
+                            newApplicant.MiddleName = middelNameTextBox.Text;
+
+                        }
+
+                        newApplicant.LastName = lastNameTextBox.Text;
+
+                        newApplicant.DateOfBirth = DateTime.Parse(dateOfBirthTextBox.Text);
+
+                        newApplicant.Gender = selectedGender.Code;
+
+                        newApplicant.CountryCode = selectedCountry.Code;
+
+                        newApplicant.StreetAddress1 = streetTextBox.Text;
+
+                        newApplicant.City = cityTextBox.Text;
+
+                        newApplicant.ProvinceStateCode = selectedProvState.Code;
+
+                        newApplicant.ProvinceStateOther = provStateOtherTextBox.Text;
+
+                        newApplicant.EmailAddress = emailTextBox.Text;
+
+                        newApplicant.Citizenship = selectedCitizenship.Id;
+
+                        newApplicant.CitizenshipOther = selectedCitizenshipOther.Code;
+
+                        newApplicant.IsEnglishFirstLanguage = englishFirstCheckBox.Checked;
+
+                        newApplicant.HasCriminalConvicition = pastCrimeCheckBox.Checked;
+
+                        newApplicant.IsIndigenous = firstNationCheckBox.Checked;
+
+                        newApplicant.IsAfricanCanadian = africanChildCheckBox.Checked;
+
+                        newApplicant.HasDisability = disabilityCheckBox.Checked;
+
+                        newApplicant.PhoneHome = phoneTextBox.Text;
+
+                        newApplicant.FirstLanguageOther = firstLanguageOtherTextBox.Text;
+
+                        service.AddToApplicants(newApplicant);
+
+                        service.SaveChanges();
+
+
+                        //Make and add application to database
+                        NSCCApplicationFormDataLayer.Models.Application newApplication =
+                            new NSCCApplicationFormDataLayer.Models.Application();
+
+                        newApplication.ApplicantId = newApplicant.ApplicantId;
+
+                        newApplication.SubmissionDate = DateTime.Now;
+
+                        newApplication.ApplicationFee = 50;
+
+                        newApplication.Paid = false;
+
+                        service.AddToApplications(newApplication);
+
+                        service.SaveChanges();
+
+
+                        //Make and add program choice to database
+                        ProgramChoice newProgramChoice = new ProgramChoice();
+
+                        newProgramChoice.ApplicantId = newApplicant.ApplicantId;
+
+                        newProgramChoice.ProgramId = selectedProgram.Id;
+
+                        newProgramChoice.CampusId = selectedCampus.Id;
+
+                        newProgramChoice.Preference = 1;
+
+                        service.AddToProgramChoices(newProgramChoice);
+
+                        service.SaveChanges();
+
+
+
+                        //Make and add program choice to database
+                        ProgramChoice newProgramChoice2 = new ProgramChoice();
+
+                        newProgramChoice2.ApplicantId = newApplicant.ApplicantId;
+
+                        newProgramChoice2.ProgramId = selectedProgram2.Id;
+
+                        newProgramChoice2.CampusId = selectedCampus2.Id;
+
+                        newProgramChoice2.Preference = 0;
+
+                        service.AddToProgramChoices(newProgramChoice2);
+
+                        service.SaveChanges();
+
+
+                        //Reload all of the dropdowns and text boxes and check boxes
+
+                        var applicantList1 = service.Applicants.Expand("ProvinceState,Country,TheCitizenship,CitizenshipOtherForApplicant").OrderBy(a => a.LastName).ToList();
+
+                        //Display Programs            
+
+                        var programsList = service.Programs.Expand(p => p.Campuss).ToList();
+
+                        programsList.Insert(0, new NSCCApplicationFormDataLayer.Models.Program
+                        { Name = "<Select A Program>" });
+
+                        programsComboBox1.DataSource = programsList;
+
+                        programsComboBox1.DisplayMember = "Name";
+
+                        var programsList2 = service.Programs.Expand(p => p.Campuss).ToList();
+
+                        programsList2.Insert(0, new NSCCApplicationFormDataLayer.Models.Program
+                        { Name = "<Select A Program>" });
+
+                        programsComboBox2.DataSource = programsList2;
+
+                        programsComboBox2.DisplayMember = "Name";
+
+
+
+                        //Display Campus
+                        var campusList = service.Campuses.OrderBy(p => p.Name).ToList();
+
+                        campusList.Insert(0, new Campus { Name = "<Select A Campus>" });
+
+                        campusComboBox1.DataSource = campusList;
+
+                        campusComboBox1.DisplayMember = "Name";
+
+                        var campusList2 = service.Campuses.OrderBy(p => p.Name).ToList();
+
+                        campusList2.Insert(0, new Campus { Name = "<Select A Campus>" });
+
+                        campusComboBox2.DataSource = campusList2;
+
+                        campusComboBox2.DisplayMember = "Name";
+
+
+                        //Display Genders
+                        var genderList = service.Genders.OrderBy(p => p.Description).ToList();
+
+                        genderList.Insert(0, new Gender { Description = "<Select A Gender>" });
+
+                        genderComboBox.DataSource = genderList;
+
+                        genderComboBox.DisplayMember = "Description";
+
+
+                        //Display Country
+                        var countryList = service.Countries.OrderBy(p => p.Name).ToList();
+
+                        countryList.Insert(0, new Country { Name = "<Select A Country>" });
+
+                        countryComboBox.DataSource = countryList;
+
+                        countryComboBox.DisplayMember = "Name";
+
+
+
+                        //Display Province State
+                        var provStateList = service.ProvinceStates.OrderBy(p => p.Name).ToList();
+
+                        provStateList.Insert(0, new ProvinceState { Name = "<Select A Province/State>" });
+
+                        provStateComboBox.DataSource = provStateList;
+
+                        provStateComboBox.DisplayMember = "Name";
+
+
+
+
+                        //Display Citizenships
+                        var citizenshipsList = service.Citizenships.OrderBy(p => p.Description).ToList();
+
+                        citizenshipsList.Insert(0, new Citizenship { Description = "<Select A Citizenship>" });
+
+                        citizenshipComboBox.DataSource = citizenshipsList;
+
+                        citizenshipComboBox.DisplayMember = "Description";
+
+
+
+                        //Display Citizenships Other
+                        var citizenshipsOtherList = service.Countries.OrderBy(p => p.Name).ToList();
+
+                        citizenshipsOtherList.Insert(0, new Country { Name = "<Select A Citizenship Other>" });
+
+                        citizenshipOtherComboBox.DataSource = citizenshipsOtherList;
+
+                        citizenshipOtherComboBox.DisplayMember = "Name";
+
+                        firstNameTextBox.Text = "";
+
+                        lastNameTextBox.Text = "";
+
+                        middelNameTextBox.Text = "";
+
+                        phoneTextBox.Text = "";
+
+                        dateOfBirthTextBox.Text = "";
+
+                        streetTextBox.Text = "";
+
+                        cityTextBox.Text = "";
+
+                        provStateOtherTextBox.Text = "";
+
+                        emailTextBox.Text = "";
+
+                        pastCrimeCheckBox.Checked = false;
+
+                        childAbuseCheckBox.Checked = false;
+
+                        pastDisciplinaryCheckBox.Checked = false;
+
+                        africanChildCheckBox.Checked = false;
+
+                        firstNationCheckBox.Checked = false;
+
+                        currentALPCheckBox.Checked = false;
+
+                        disabilityCheckBox.Checked = false;
+
+                        englishFirstCheckBox.Checked = false;
+
+                        MessageBox.Show("Thank you for filling out an application");
+
+
+                        //Load up the applicants list box
+                        List<Applicant> applicantList = service.Applicants.OrderBy(a => a.LastName).ToList();
+
+                        applicantsListBox.DataSource = applicantList;
+
+                        applicantsListBox.DisplayMember = "LastName";
+                    }
+                    catch
+                    {
+
+                        MessageBox.Show("An error has occured");
 
                     }
-
-                    newApplicant.LastName = lastNameTextBox.Text;
-
-                    newApplicant.DateOfBirth = DateTime.Parse(dateOfBirthTextBox.Text);
-
-                    newApplicant.Gender = selectedGender.Code;
-
-                    newApplicant.CountryCode = selectedCountry.Code;
-
-                    newApplicant.StreetAddress1 = streetTextBox.Text;
-
-                    newApplicant.City = cityTextBox.Text;
-
-                    newApplicant.ProvinceStateCode = selectedProvState.Code;
-
-                    newApplicant.ProvinceStateOther = provStateOtherTextBox.Text;
-
-                    newApplicant.EmailAddress = emailTextBox.Text;
-
-                    newApplicant.Citizenship = selectedCitizenship.Id;
-
-                    newApplicant.CitizenshipOther = selectedCitizenshipOther.Code;
-
-                    newApplicant.IsEnglishFirstLanguage = englishFirstCheckBox.Checked;
-
-                    newApplicant.HasCriminalConvicition = pastCrimeCheckBox.Checked;
-
-                    newApplicant.IsIndigenous = firstNationCheckBox.Checked;
-
-                    newApplicant.IsAfricanCanadian = africanChildCheckBox.Checked;
-
-                    newApplicant.HasDisability = disabilityCheckBox.Checked;
-
-                    newApplicant.PhoneHome = phoneTextBox.Text;
-
-                    newApplicant.FirstLanguageOther = firstLanguageOtherTextBox.Text;
-
-                    service.AddToApplicants(newApplicant);
-
-                    service.SaveChanges();
-
-
-                    //Make and add application to database
-                    NSCCApplicationFormDataLayer.Models.Application newApplication =
-                        new NSCCApplicationFormDataLayer.Models.Application();
-
-                    newApplication.ApplicantId = newApplicant.ApplicantId;
-
-                    newApplication.SubmissionDate = DateTime.Now;
-
-                    newApplication.ApplicationFee = 50;
-
-                    newApplication.Paid = false;
-
-                    service.AddToApplications(newApplication);
-
-                    service.SaveChanges();
-
-
-                    //Make and add program choice to database
-                    ProgramChoice newProgramChoice = new ProgramChoice();
-
-                    newProgramChoice.ApplicantId = newApplicant.ApplicantId;
-
-                    newProgramChoice.ProgramId = selectedProgram.Id;
-
-                    newProgramChoice.CampusId = selectedCampus.Id;
-
-                    newProgramChoice.Preference = 1;
-
-                    service.AddToProgramChoices(newProgramChoice);
-
-                    service.SaveChanges();
-
-
-
-                    //Make and add program choice to database
-                    ProgramChoice newProgramChoice2 = new ProgramChoice();
-
-                    newProgramChoice2.ApplicantId = newApplicant.ApplicantId;
-
-                    newProgramChoice2.ProgramId = selectedProgram2.Id;
-
-                    newProgramChoice2.CampusId = selectedCampus2.Id;
-
-                    newProgramChoice2.Preference = 0;
-
-                    service.AddToProgramChoices(newProgramChoice2);
-
-                    service.SaveChanges();
-
-
-                    //Reload all of the dropdowns and text boxes and check boxes
-
-                    var applicantList1 = service.Applicants.Expand("ProvinceState,Country,TheCitizenship,CitizenshipOtherForApplicant").OrderBy(a => a.LastName).ToList();
-
-                    //Display Programs            
-
-                    var programsList = service.Programs.Expand(p => p.Campuss).ToList();
-
-                    programsList.Insert(0, new NSCCApplicationFormDataLayer.Models.Program
-                    { Name = "<Select A Program>" });
-
-                    programsComboBox1.DataSource = programsList;
-
-                    programsComboBox1.DisplayMember = "Name";
-
-                    var programsList2 = service.Programs.Expand(p => p.Campuss).ToList();
-
-                    programsList2.Insert(0, new NSCCApplicationFormDataLayer.Models.Program
-                    { Name = "<Select A Program>" });
-
-                    programsComboBox2.DataSource = programsList2;
-
-                    programsComboBox2.DisplayMember = "Name";
-
-
-
-                    //Display Campus
-                    var campusList = service.Campuses.OrderBy(p => p.Name).ToList();
-
-                    campusList.Insert(0, new Campus { Name = "<Select A Campus>" });
-
-                    campusComboBox1.DataSource = campusList;
-
-                    campusComboBox1.DisplayMember = "Name";
-
-                    var campusList2 = service.Campuses.OrderBy(p => p.Name).ToList();
-
-                    campusList2.Insert(0, new Campus { Name = "<Select A Campus>" });
-
-                    campusComboBox2.DataSource = campusList2;
-
-                    campusComboBox2.DisplayMember = "Name";
-
-
-                    //Display Genders
-                    var genderList = service.Genders.OrderBy(p => p.Description).ToList();
-
-                    genderList.Insert(0, new Gender { Description = "<Select A Gender>" });
-
-                    genderComboBox.DataSource = genderList;
-
-                    genderComboBox.DisplayMember = "Description";
-
-
-                    //Display Country
-                    var countryList = service.Countries.OrderBy(p => p.Name).ToList();
-
-                    countryList.Insert(0, new Country { Name = "<Select A Country>" });
-
-                    countryComboBox.DataSource = countryList;
-
-                    countryComboBox.DisplayMember = "Name";
-
-
-
-                    //Display Province State
-                    var provStateList = service.ProvinceStates.OrderBy(p => p.Name).ToList();
-
-                    provStateList.Insert(0, new ProvinceState { Name = "<Select A Province/State>" });
-
-                    provStateComboBox.DataSource = provStateList;
-
-                    provStateComboBox.DisplayMember = "Name";
-
-
-
-
-                    //Display Citizenships
-                    var citizenshipsList = service.Citizenships.OrderBy(p => p.Description).ToList();
-
-                    citizenshipsList.Insert(0, new Citizenship { Description = "<Select A Citizenship>" });
-
-                    citizenshipComboBox.DataSource = citizenshipsList;
-
-                    citizenshipComboBox.DisplayMember = "Description";
-
-
-
-                    //Display Citizenships Other
-                    var citizenshipsOtherList = service.Countries.OrderBy(p => p.Name).ToList();
-
-                    citizenshipsOtherList.Insert(0, new Country { Name = "<Select A Citizenship Other>" });
-
-                    citizenshipOtherComboBox.DataSource = citizenshipsOtherList;
-
-                    citizenshipOtherComboBox.DisplayMember = "Name";
-
-                    firstNameTextBox.Text = "";
-
-                    lastNameTextBox.Text = "";
-
-                    middelNameTextBox.Text = "";
-
-                    phoneTextBox.Text = "";
-
-                    dateOfBirthTextBox.Text = "";
-
-                    streetTextBox.Text = "";
-
-                    cityTextBox.Text = "";
-
-                    provStateOtherTextBox.Text = "";
-
-                    emailTextBox.Text = "";
-
-                    pastCrimeCheckBox.Checked = false;
-
-                    childAbuseCheckBox.Checked = false;
-
-                    pastDisciplinaryCheckBox.Checked = false;
-
-                    africanChildCheckBox.Checked = false;
-
-                    firstNationCheckBox.Checked = false;
-
-                    currentALPCheckBox.Checked = false;
-
-                    disabilityCheckBox.Checked = false;
-
-                    englishFirstCheckBox.Checked = false;
-
-                    MessageBox.Show("Thank you for filling out an application");
-
-
-                    //Load up the applicants list box
-                    List<Applicant> applicantList = service.Applicants.OrderBy(a => a.LastName).ToList();
-
-                    applicantsListBox.DataSource = applicantList;
-
-                    applicantsListBox.DisplayMember = "LastName";
                 }
-                catch
-                {
 
-                    MessageBox.Show("An error has occured");
-
-                }
             }
 
         }

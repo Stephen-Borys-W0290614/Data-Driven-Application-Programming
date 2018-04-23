@@ -76,53 +76,53 @@
             this.firstNameLabel = new System.Windows.Forms.Label();
             this.programsComboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.applicantsListBox = new System.Windows.Forms.ListBox();
-            this.applicantFirstNameTextBox = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.applicantIdTextBox = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.applicantMiddleNameTextBox = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.applicantLastNameTextBox = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.applicantDOBTextBox = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.applicantCountryTextBox = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.applicantGenTextBox = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.applicantCityTextBox = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.applicantStreetTextBox = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.applicantProvStateTextBox = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.applicantEmailTextBox = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.applicantCitizenshipTextBox = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.applicantCitizenOtherTextBox = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.documentedTextBox = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.nationTextBox = new System.Windows.Forms.TextBox();
-            this.label20 = new System.Windows.Forms.Label();
-            this.africanTextBox = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.criminalTextBox = new System.Windows.Forms.TextBox();
-            this.progChoice1TextBox = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.progChoice2TextBox = new System.Windows.Forms.TextBox();
-            this.campus2TextBox = new System.Windows.Forms.TextBox();
-            this.label25 = new System.Windows.Forms.Label();
-            this.campus1TextBox = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.paidTextBox = new System.Windows.Forms.TextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.subDateTextBox = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.paidTextBox = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.campus1TextBox = new System.Windows.Forms.TextBox();
+            this.campus2TextBox = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.progChoice2TextBox = new System.Windows.Forms.TextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.progChoice1TextBox = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.criminalTextBox = new System.Windows.Forms.TextBox();
+            this.label20 = new System.Windows.Forms.Label();
+            this.africanTextBox = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.nationTextBox = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.documentedTextBox = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.applicantCitizenOtherTextBox = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.applicantCitizenshipTextBox = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.applicantEmailTextBox = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.applicantProvStateTextBox = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.applicantStreetTextBox = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.applicantCityTextBox = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.applicantGenTextBox = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.applicantCountryTextBox = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.applicantDOBTextBox = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.applicantLastNameTextBox = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.applicantMiddleNameTextBox = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.applicantIdTextBox = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.applicantFirstNameTextBox = new System.Windows.Forms.TextBox();
+            this.applicantsListBox = new System.Windows.Forms.ListBox();
             this.tabControl1.SuspendLayout();
             this.Application.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -683,372 +683,22 @@
             this.tabPage2.Text = "Applicants";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // applicantsListBox
-            // 
-            this.applicantsListBox.FormattingEnabled = true;
-            this.applicantsListBox.ItemHeight = 31;
-            this.applicantsListBox.Location = new System.Drawing.Point(11, 21);
-            this.applicantsListBox.Name = "applicantsListBox";
-            this.applicantsListBox.Size = new System.Drawing.Size(566, 1058);
-            this.applicantsListBox.TabIndex = 0;
-            this.applicantsListBox.SelectedIndexChanged += new System.EventHandler(this.applicantsListBox_SelectedIndexChanged);
-            // 
-            // applicantFirstNameTextBox
-            // 
-            this.applicantFirstNameTextBox.Enabled = false;
-            this.applicantFirstNameTextBox.Location = new System.Drawing.Point(879, 87);
-            this.applicantFirstNameTextBox.Name = "applicantFirstNameTextBox";
-            this.applicantFirstNameTextBox.Size = new System.Drawing.Size(427, 38);
-            this.applicantFirstNameTextBox.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(593, 33);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(164, 32);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "Applicant Id";
-            // 
-            // applicantIdTextBox
-            // 
-            this.applicantIdTextBox.Enabled = false;
-            this.applicantIdTextBox.Location = new System.Drawing.Point(763, 27);
-            this.applicantIdTextBox.Name = "applicantIdTextBox";
-            this.applicantIdTextBox.Size = new System.Drawing.Size(427, 38);
-            this.applicantIdTextBox.TabIndex = 3;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(593, 93);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(278, 32);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "Applicant First Name";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(593, 150);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(308, 32);
-            this.label7.TabIndex = 6;
-            this.label7.Text = "Applicant Middle Name";
-            // 
-            // applicantMiddleNameTextBox
-            // 
-            this.applicantMiddleNameTextBox.Enabled = false;
-            this.applicantMiddleNameTextBox.Location = new System.Drawing.Point(907, 144);
-            this.applicantMiddleNameTextBox.Name = "applicantMiddleNameTextBox";
-            this.applicantMiddleNameTextBox.Size = new System.Drawing.Size(427, 38);
-            this.applicantMiddleNameTextBox.TabIndex = 5;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(593, 206);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(277, 32);
-            this.label8.TabIndex = 8;
-            this.label8.Text = "Applicant Last Name";
-            // 
-            // applicantLastNameTextBox
-            // 
-            this.applicantLastNameTextBox.Enabled = false;
-            this.applicantLastNameTextBox.Location = new System.Drawing.Point(907, 200);
-            this.applicantLastNameTextBox.Name = "applicantLastNameTextBox";
-            this.applicantLastNameTextBox.Size = new System.Drawing.Size(427, 38);
-            this.applicantLastNameTextBox.TabIndex = 7;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(593, 260);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(304, 32);
-            this.label9.TabIndex = 10;
-            this.label9.Text = "Applicant Date Of Birth";
-            // 
-            // applicantDOBTextBox
-            // 
-            this.applicantDOBTextBox.Enabled = false;
-            this.applicantDOBTextBox.Location = new System.Drawing.Point(907, 254);
-            this.applicantDOBTextBox.Name = "applicantDOBTextBox";
-            this.applicantDOBTextBox.Size = new System.Drawing.Size(427, 38);
-            this.applicantDOBTextBox.TabIndex = 9;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(593, 377);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(240, 32);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Applicant Country";
-            // 
-            // applicantCountryTextBox
-            // 
-            this.applicantCountryTextBox.Enabled = false;
-            this.applicantCountryTextBox.Location = new System.Drawing.Point(907, 371);
-            this.applicantCountryTextBox.Name = "applicantCountryTextBox";
-            this.applicantCountryTextBox.Size = new System.Drawing.Size(427, 38);
-            this.applicantCountryTextBox.TabIndex = 11;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(593, 320);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(236, 32);
-            this.label11.TabIndex = 14;
-            this.label11.Text = "Applicant Gender";
-            // 
-            // applicantGenTextBox
-            // 
-            this.applicantGenTextBox.Enabled = false;
-            this.applicantGenTextBox.Location = new System.Drawing.Point(907, 314);
-            this.applicantGenTextBox.Name = "applicantGenTextBox";
-            this.applicantGenTextBox.Size = new System.Drawing.Size(427, 38);
-            this.applicantGenTextBox.TabIndex = 13;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(593, 488);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(190, 32);
-            this.label12.TabIndex = 16;
-            this.label12.Text = "Applicant City";
-            // 
-            // applicantCityTextBox
-            // 
-            this.applicantCityTextBox.Enabled = false;
-            this.applicantCityTextBox.Location = new System.Drawing.Point(907, 482);
-            this.applicantCityTextBox.Name = "applicantCityTextBox";
-            this.applicantCityTextBox.Size = new System.Drawing.Size(427, 38);
-            this.applicantCityTextBox.TabIndex = 15;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(593, 433);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(328, 32);
-            this.label13.TabIndex = 18;
-            this.label13.Text = "Applicant Street Address";
-            // 
-            // applicantStreetTextBox
-            // 
-            this.applicantStreetTextBox.Enabled = false;
-            this.applicantStreetTextBox.Location = new System.Drawing.Point(927, 427);
-            this.applicantStreetTextBox.Name = "applicantStreetTextBox";
-            this.applicantStreetTextBox.Size = new System.Drawing.Size(427, 38);
-            this.applicantStreetTextBox.TabIndex = 17;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(593, 541);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(326, 32);
-            this.label14.TabIndex = 20;
-            this.label14.Text = "Applicant Province State";
-            // 
-            // applicantProvStateTextBox
-            // 
-            this.applicantProvStateTextBox.Enabled = false;
-            this.applicantProvStateTextBox.Location = new System.Drawing.Point(929, 535);
-            this.applicantProvStateTextBox.Name = "applicantProvStateTextBox";
-            this.applicantProvStateTextBox.Size = new System.Drawing.Size(427, 38);
-            this.applicantProvStateTextBox.TabIndex = 19;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(593, 596);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(324, 32);
-            this.label15.TabIndex = 22;
-            this.label15.Text = "Applicant Email Address";
-            // 
-            // applicantEmailTextBox
-            // 
-            this.applicantEmailTextBox.Enabled = false;
-            this.applicantEmailTextBox.Location = new System.Drawing.Point(927, 590);
-            this.applicantEmailTextBox.Name = "applicantEmailTextBox";
-            this.applicantEmailTextBox.Size = new System.Drawing.Size(427, 38);
-            this.applicantEmailTextBox.TabIndex = 21;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(593, 650);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(282, 32);
-            this.label16.TabIndex = 24;
-            this.label16.Text = "Applicant Citizenship";
-            // 
-            // applicantCitizenshipTextBox
-            // 
-            this.applicantCitizenshipTextBox.Enabled = false;
-            this.applicantCitizenshipTextBox.Location = new System.Drawing.Point(927, 644);
-            this.applicantCitizenshipTextBox.Name = "applicantCitizenshipTextBox";
-            this.applicantCitizenshipTextBox.Size = new System.Drawing.Size(427, 38);
-            this.applicantCitizenshipTextBox.TabIndex = 23;
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(595, 705);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(360, 32);
-            this.label17.TabIndex = 26;
-            this.label17.Text = "Applicant Citizenship Other";
-            // 
-            // applicantCitizenOtherTextBox
-            // 
-            this.applicantCitizenOtherTextBox.Enabled = false;
-            this.applicantCitizenOtherTextBox.Location = new System.Drawing.Point(962, 699);
-            this.applicantCitizenOtherTextBox.Name = "applicantCitizenOtherTextBox";
-            this.applicantCitizenOtherTextBox.Size = new System.Drawing.Size(427, 38);
-            this.applicantCitizenOtherTextBox.TabIndex = 25;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(595, 927);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(299, 32);
-            this.label18.TabIndex = 28;
-            this.label18.Text = "Documented Disability";
-            // 
-            // documentedTextBox
-            // 
-            this.documentedTextBox.Enabled = false;
-            this.documentedTextBox.Location = new System.Drawing.Point(962, 921);
-            this.documentedTextBox.Name = "documentedTextBox";
-            this.documentedTextBox.Size = new System.Drawing.Size(427, 38);
-            this.documentedTextBox.TabIndex = 27;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(595, 871);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(160, 32);
-            this.label19.TabIndex = 30;
-            this.label19.Text = "First Nation";
-            // 
-            // nationTextBox
-            // 
-            this.nationTextBox.Enabled = false;
-            this.nationTextBox.Location = new System.Drawing.Point(962, 865);
-            this.nationTextBox.Name = "nationTextBox";
-            this.nationTextBox.Size = new System.Drawing.Size(427, 38);
-            this.nationTextBox.TabIndex = 29;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(595, 818);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(234, 32);
-            this.label20.TabIndex = 32;
-            this.label20.Text = "African Canadian";
-            // 
-            // africanTextBox
-            // 
-            this.africanTextBox.Enabled = false;
-            this.africanTextBox.Location = new System.Drawing.Point(962, 812);
-            this.africanTextBox.Name = "africanTextBox";
-            this.africanTextBox.Size = new System.Drawing.Size(427, 38);
-            this.africanTextBox.TabIndex = 31;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(595, 759);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(325, 32);
-            this.label21.TabIndex = 34;
-            this.label21.Text = "Past Criminal Conviciton";
-            // 
-            // criminalTextBox
-            // 
-            this.criminalTextBox.Enabled = false;
-            this.criminalTextBox.Location = new System.Drawing.Point(962, 753);
-            this.criminalTextBox.Name = "criminalTextBox";
-            this.criminalTextBox.Size = new System.Drawing.Size(427, 38);
-            this.criminalTextBox.TabIndex = 33;
-            // 
-            // progChoice1TextBox
-            // 
-            this.progChoice1TextBox.Enabled = false;
-            this.progChoice1TextBox.Location = new System.Drawing.Point(1751, 44);
-            this.progChoice1TextBox.Name = "progChoice1TextBox";
-            this.progChoice1TextBox.Size = new System.Drawing.Size(427, 38);
-            this.progChoice1TextBox.TabIndex = 35;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(1484, 50);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(242, 32);
-            this.label22.TabIndex = 36;
-            this.label22.Text = "Program Choice 1";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(1484, 356);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(242, 32);
-            this.label23.TabIndex = 38;
-            this.label23.Text = "Program Choice 2";
-            // 
-            // progChoice2TextBox
-            // 
-            this.progChoice2TextBox.Enabled = false;
-            this.progChoice2TextBox.Location = new System.Drawing.Point(1751, 350);
-            this.progChoice2TextBox.Name = "progChoice2TextBox";
-            this.progChoice2TextBox.Size = new System.Drawing.Size(427, 38);
-            this.progChoice2TextBox.TabIndex = 37;
-            // 
-            // campus2TextBox
-            // 
-            this.campus2TextBox.Enabled = false;
-            this.campus2TextBox.Location = new System.Drawing.Point(1751, 427);
-            this.campus2TextBox.Name = "campus2TextBox";
-            this.campus2TextBox.Size = new System.Drawing.Size(427, 38);
-            this.campus2TextBox.TabIndex = 39;
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(1606, 129);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(120, 32);
-            this.label25.TabIndex = 42;
-            this.label25.Text = "Campus";
-            // 
-            // campus1TextBox
-            // 
-            this.campus1TextBox.Enabled = false;
-            this.campus1TextBox.Location = new System.Drawing.Point(1751, 123);
-            this.campus1TextBox.Name = "campus1TextBox";
-            this.campus1TextBox.Size = new System.Drawing.Size(427, 38);
-            this.campus1TextBox.TabIndex = 41;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(1606, 433);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(120, 32);
-            this.label26.TabIndex = 43;
-            this.label26.Text = "Campus";
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(1492, 584);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(230, 32);
+            this.label27.TabIndex = 47;
+            this.label27.Text = "Submission Date";
+            // 
+            // subDateTextBox
+            // 
+            this.subDateTextBox.Enabled = false;
+            this.subDateTextBox.Location = new System.Drawing.Point(1751, 578);
+            this.subDateTextBox.Name = "subDateTextBox";
+            this.subDateTextBox.Size = new System.Drawing.Size(427, 38);
+            this.subDateTextBox.TabIndex = 46;
             // 
             // label24
             // 
@@ -1067,22 +717,372 @@
             this.paidTextBox.Size = new System.Drawing.Size(427, 38);
             this.paidTextBox.TabIndex = 44;
             // 
-            // label27
+            // label26
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(1492, 584);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(230, 32);
-            this.label27.TabIndex = 47;
-            this.label27.Text = "Submission Date";
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(1606, 433);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(120, 32);
+            this.label26.TabIndex = 43;
+            this.label26.Text = "Campus";
             // 
-            // subDateTextBox
+            // label25
             // 
-            this.subDateTextBox.Enabled = false;
-            this.subDateTextBox.Location = new System.Drawing.Point(1751, 578);
-            this.subDateTextBox.Name = "subDateTextBox";
-            this.subDateTextBox.Size = new System.Drawing.Size(427, 38);
-            this.subDateTextBox.TabIndex = 46;
+            this.label25.AutoSize = true;
+            this.label25.Location = new System.Drawing.Point(1606, 129);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(120, 32);
+            this.label25.TabIndex = 42;
+            this.label25.Text = "Campus";
+            // 
+            // campus1TextBox
+            // 
+            this.campus1TextBox.Enabled = false;
+            this.campus1TextBox.Location = new System.Drawing.Point(1751, 123);
+            this.campus1TextBox.Name = "campus1TextBox";
+            this.campus1TextBox.Size = new System.Drawing.Size(427, 38);
+            this.campus1TextBox.TabIndex = 41;
+            // 
+            // campus2TextBox
+            // 
+            this.campus2TextBox.Enabled = false;
+            this.campus2TextBox.Location = new System.Drawing.Point(1751, 427);
+            this.campus2TextBox.Name = "campus2TextBox";
+            this.campus2TextBox.Size = new System.Drawing.Size(427, 38);
+            this.campus2TextBox.TabIndex = 39;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(1484, 356);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(242, 32);
+            this.label23.TabIndex = 38;
+            this.label23.Text = "Program Choice 2";
+            // 
+            // progChoice2TextBox
+            // 
+            this.progChoice2TextBox.Enabled = false;
+            this.progChoice2TextBox.Location = new System.Drawing.Point(1751, 350);
+            this.progChoice2TextBox.Name = "progChoice2TextBox";
+            this.progChoice2TextBox.Size = new System.Drawing.Size(427, 38);
+            this.progChoice2TextBox.TabIndex = 37;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Location = new System.Drawing.Point(1484, 50);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(242, 32);
+            this.label22.TabIndex = 36;
+            this.label22.Text = "Program Choice 1";
+            // 
+            // progChoice1TextBox
+            // 
+            this.progChoice1TextBox.Enabled = false;
+            this.progChoice1TextBox.Location = new System.Drawing.Point(1751, 44);
+            this.progChoice1TextBox.Name = "progChoice1TextBox";
+            this.progChoice1TextBox.Size = new System.Drawing.Size(427, 38);
+            this.progChoice1TextBox.TabIndex = 35;
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Location = new System.Drawing.Point(595, 759);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(325, 32);
+            this.label21.TabIndex = 34;
+            this.label21.Text = "Past Criminal Conviciton";
+            // 
+            // criminalTextBox
+            // 
+            this.criminalTextBox.Enabled = false;
+            this.criminalTextBox.Location = new System.Drawing.Point(962, 753);
+            this.criminalTextBox.Name = "criminalTextBox";
+            this.criminalTextBox.Size = new System.Drawing.Size(427, 38);
+            this.criminalTextBox.TabIndex = 33;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Location = new System.Drawing.Point(595, 818);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(234, 32);
+            this.label20.TabIndex = 32;
+            this.label20.Text = "African Canadian";
+            // 
+            // africanTextBox
+            // 
+            this.africanTextBox.Enabled = false;
+            this.africanTextBox.Location = new System.Drawing.Point(962, 812);
+            this.africanTextBox.Name = "africanTextBox";
+            this.africanTextBox.Size = new System.Drawing.Size(427, 38);
+            this.africanTextBox.TabIndex = 31;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(595, 871);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(160, 32);
+            this.label19.TabIndex = 30;
+            this.label19.Text = "First Nation";
+            // 
+            // nationTextBox
+            // 
+            this.nationTextBox.Enabled = false;
+            this.nationTextBox.Location = new System.Drawing.Point(962, 865);
+            this.nationTextBox.Name = "nationTextBox";
+            this.nationTextBox.Size = new System.Drawing.Size(427, 38);
+            this.nationTextBox.TabIndex = 29;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(595, 927);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(299, 32);
+            this.label18.TabIndex = 28;
+            this.label18.Text = "Documented Disability";
+            // 
+            // documentedTextBox
+            // 
+            this.documentedTextBox.Enabled = false;
+            this.documentedTextBox.Location = new System.Drawing.Point(962, 921);
+            this.documentedTextBox.Name = "documentedTextBox";
+            this.documentedTextBox.Size = new System.Drawing.Size(427, 38);
+            this.documentedTextBox.TabIndex = 27;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(595, 705);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(360, 32);
+            this.label17.TabIndex = 26;
+            this.label17.Text = "Applicant Citizenship Other";
+            // 
+            // applicantCitizenOtherTextBox
+            // 
+            this.applicantCitizenOtherTextBox.Enabled = false;
+            this.applicantCitizenOtherTextBox.Location = new System.Drawing.Point(962, 699);
+            this.applicantCitizenOtherTextBox.Name = "applicantCitizenOtherTextBox";
+            this.applicantCitizenOtherTextBox.Size = new System.Drawing.Size(427, 38);
+            this.applicantCitizenOtherTextBox.TabIndex = 25;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(593, 650);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(282, 32);
+            this.label16.TabIndex = 24;
+            this.label16.Text = "Applicant Citizenship";
+            // 
+            // applicantCitizenshipTextBox
+            // 
+            this.applicantCitizenshipTextBox.Enabled = false;
+            this.applicantCitizenshipTextBox.Location = new System.Drawing.Point(927, 644);
+            this.applicantCitizenshipTextBox.Name = "applicantCitizenshipTextBox";
+            this.applicantCitizenshipTextBox.Size = new System.Drawing.Size(427, 38);
+            this.applicantCitizenshipTextBox.TabIndex = 23;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(593, 596);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(324, 32);
+            this.label15.TabIndex = 22;
+            this.label15.Text = "Applicant Email Address";
+            // 
+            // applicantEmailTextBox
+            // 
+            this.applicantEmailTextBox.Enabled = false;
+            this.applicantEmailTextBox.Location = new System.Drawing.Point(927, 590);
+            this.applicantEmailTextBox.Name = "applicantEmailTextBox";
+            this.applicantEmailTextBox.Size = new System.Drawing.Size(427, 38);
+            this.applicantEmailTextBox.TabIndex = 21;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(593, 541);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(326, 32);
+            this.label14.TabIndex = 20;
+            this.label14.Text = "Applicant Province State";
+            // 
+            // applicantProvStateTextBox
+            // 
+            this.applicantProvStateTextBox.Enabled = false;
+            this.applicantProvStateTextBox.Location = new System.Drawing.Point(929, 535);
+            this.applicantProvStateTextBox.Name = "applicantProvStateTextBox";
+            this.applicantProvStateTextBox.Size = new System.Drawing.Size(427, 38);
+            this.applicantProvStateTextBox.TabIndex = 19;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(593, 433);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(328, 32);
+            this.label13.TabIndex = 18;
+            this.label13.Text = "Applicant Street Address";
+            // 
+            // applicantStreetTextBox
+            // 
+            this.applicantStreetTextBox.Enabled = false;
+            this.applicantStreetTextBox.Location = new System.Drawing.Point(927, 427);
+            this.applicantStreetTextBox.Name = "applicantStreetTextBox";
+            this.applicantStreetTextBox.Size = new System.Drawing.Size(427, 38);
+            this.applicantStreetTextBox.TabIndex = 17;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(593, 488);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(190, 32);
+            this.label12.TabIndex = 16;
+            this.label12.Text = "Applicant City";
+            // 
+            // applicantCityTextBox
+            // 
+            this.applicantCityTextBox.Enabled = false;
+            this.applicantCityTextBox.Location = new System.Drawing.Point(907, 482);
+            this.applicantCityTextBox.Name = "applicantCityTextBox";
+            this.applicantCityTextBox.Size = new System.Drawing.Size(427, 38);
+            this.applicantCityTextBox.TabIndex = 15;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(593, 320);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(236, 32);
+            this.label11.TabIndex = 14;
+            this.label11.Text = "Applicant Gender";
+            // 
+            // applicantGenTextBox
+            // 
+            this.applicantGenTextBox.Enabled = false;
+            this.applicantGenTextBox.Location = new System.Drawing.Point(907, 314);
+            this.applicantGenTextBox.Name = "applicantGenTextBox";
+            this.applicantGenTextBox.Size = new System.Drawing.Size(427, 38);
+            this.applicantGenTextBox.TabIndex = 13;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(593, 377);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(240, 32);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Applicant Country";
+            // 
+            // applicantCountryTextBox
+            // 
+            this.applicantCountryTextBox.Enabled = false;
+            this.applicantCountryTextBox.Location = new System.Drawing.Point(907, 371);
+            this.applicantCountryTextBox.Name = "applicantCountryTextBox";
+            this.applicantCountryTextBox.Size = new System.Drawing.Size(427, 38);
+            this.applicantCountryTextBox.TabIndex = 11;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(593, 260);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(304, 32);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Applicant Date Of Birth";
+            // 
+            // applicantDOBTextBox
+            // 
+            this.applicantDOBTextBox.Enabled = false;
+            this.applicantDOBTextBox.Location = new System.Drawing.Point(907, 254);
+            this.applicantDOBTextBox.Name = "applicantDOBTextBox";
+            this.applicantDOBTextBox.Size = new System.Drawing.Size(427, 38);
+            this.applicantDOBTextBox.TabIndex = 9;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(593, 206);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(277, 32);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "Applicant Last Name";
+            // 
+            // applicantLastNameTextBox
+            // 
+            this.applicantLastNameTextBox.Enabled = false;
+            this.applicantLastNameTextBox.Location = new System.Drawing.Point(907, 200);
+            this.applicantLastNameTextBox.Name = "applicantLastNameTextBox";
+            this.applicantLastNameTextBox.Size = new System.Drawing.Size(427, 38);
+            this.applicantLastNameTextBox.TabIndex = 7;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(593, 150);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(308, 32);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Applicant Middle Name";
+            // 
+            // applicantMiddleNameTextBox
+            // 
+            this.applicantMiddleNameTextBox.Enabled = false;
+            this.applicantMiddleNameTextBox.Location = new System.Drawing.Point(907, 144);
+            this.applicantMiddleNameTextBox.Name = "applicantMiddleNameTextBox";
+            this.applicantMiddleNameTextBox.Size = new System.Drawing.Size(427, 38);
+            this.applicantMiddleNameTextBox.TabIndex = 5;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(593, 93);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(278, 32);
+            this.label6.TabIndex = 4;
+            this.label6.Text = "Applicant First Name";
+            // 
+            // applicantIdTextBox
+            // 
+            this.applicantIdTextBox.Enabled = false;
+            this.applicantIdTextBox.Location = new System.Drawing.Point(763, 27);
+            this.applicantIdTextBox.Name = "applicantIdTextBox";
+            this.applicantIdTextBox.Size = new System.Drawing.Size(427, 38);
+            this.applicantIdTextBox.TabIndex = 3;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(593, 33);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(164, 32);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Applicant Id";
+            // 
+            // applicantFirstNameTextBox
+            // 
+            this.applicantFirstNameTextBox.Enabled = false;
+            this.applicantFirstNameTextBox.Location = new System.Drawing.Point(879, 87);
+            this.applicantFirstNameTextBox.Name = "applicantFirstNameTextBox";
+            this.applicantFirstNameTextBox.Size = new System.Drawing.Size(427, 38);
+            this.applicantFirstNameTextBox.TabIndex = 1;
+            // 
+            // applicantsListBox
+            // 
+            this.applicantsListBox.FormattingEnabled = true;
+            this.applicantsListBox.ItemHeight = 31;
+            this.applicantsListBox.Location = new System.Drawing.Point(11, 21);
+            this.applicantsListBox.Name = "applicantsListBox";
+            this.applicantsListBox.Size = new System.Drawing.Size(566, 1058);
+            this.applicantsListBox.TabIndex = 0;
+            this.applicantsListBox.SelectedIndexChanged += new System.EventHandler(this.applicantsListBox_SelectedIndexChanged);
             // 
             // middleNameTextBox
             // 
